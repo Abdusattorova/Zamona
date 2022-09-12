@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.zamona.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.zamona.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_puskFragment"
+            app:destination="@id/puskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/puskFragment"
+        android:name="com.example.zamona.PuskFragment"
+        android:label="fragment_pusk"
+        tools:layout="@layout/fragment_pusk" >
+        <action
+            android:id="@+id/action_puskFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.zamona.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.example.zamona.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" />
+</navigation>
